@@ -8,7 +8,7 @@ const Navigation = () => {
             <div className={'navigation-container'}>
                 <div className={'main-navigation-container'}>
                     <div className={'logo-container'}>
-                        Songbird
+                        Song<span>bird</span>
                     </div>
                     <div className={'score'}>
                         Score: 0
