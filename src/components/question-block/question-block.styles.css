@@ -1,0 +1,35 @@
+.image-bird > img {
+  width: 11rem;
+  height: 9rem;
+  border-radius: 12px;
+}
+
+.question-block-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px auto;
+  background-color: #363736;
+  padding: 15px 55px 15px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.2em;
+}
+
+.name-bird {
+  font-size: 2em;
+  color: white;
+}
+
+hr {
+  margin: 1em 0 1em 0;
+}
+
+.description-question {
+  width: inherit;
+}
+/*# sourceMappingURL=question-block.styles.css.map */

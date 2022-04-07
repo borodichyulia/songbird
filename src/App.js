@@ -1,11 +1,14 @@
 import Navigation from './routes/navigation/navigation.component';
-
+import Home from './routes/home/home.component';
+import AudioPlayer from './components/controls-audio/audio-player';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navigation/>
-    </div>
+      <Home/>
+      </div>
+
   );
 }
 
