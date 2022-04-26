@@ -1,30 +1,38 @@
+import { useSelector } from 'react-redux';
+
 import AudioPlayer from '../audio-player/audio-player.component';
 
-import './answer-block.styles.scss';
+import '../../components/answer-block/answer-block.styles.scss';
 
 const AnswerBlock = () => {
+    const currentId = useSelector(state => state.toolkit.id);
+    const birds = useSelector(state => state.bird.birds);
+
+    const currentBird = birds.filter(item => item.id === currentId);
+    const { image, name, species, description, audio } = currentBird[0];
+
     return (
         <div className='answer-block-container'>
             <div className='information-bird'>
                 <div className='image-bird'>
-                    <img src='https://live.staticflickr.com//65535//49024617331_b9d0d2c9b3.jpg'/>
+                    <img src={image} />
                 </div>
                 <div className='description-bird'>
                     <div className='name-bird'>
-                        Ястреб
+                        {name}
                     </div>
-                    <hr/>
+                    <hr />
                     <div className='kind-bird'>
-                        Accipiter gentilis
+                        {species}
                     </div>
-                    <hr/>
+                    <hr />
                     <div className='song-bird'>
-                        <AudioPlayer />
+                        <AudioPlayer song={audio} />
                     </div>
                 </div>
             </div>
             <div className='text-description-bird'>
-            Для всех ястребов характерны широкие и короткие крылья. Ещё один отличительный признак - белые «брови» над глазами. Славянские дружинники размещали изображение ястреба на своих знаменах, как символ отваги, мощи и безжалостности к врагам.
+                {description}
             </div>
         </div>
     )

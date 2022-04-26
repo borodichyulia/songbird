@@ -50,7 +50,7 @@
 
     appearance: none;
     background: var(--bar-bg);
-    border-radius: 0px;
+    border-radius: 0;
     position: relative;
     width: 100%;
     height: 5px;
@@ -61,7 +61,7 @@
 .progress-bar::-webkit-slider-runnable-track {
     background: var(--bar-bg);
     ;
-    border-radius: 0px;
+    border-radius: 0;
     position: relative;
     width: 100%;
     height: 5px;
@@ -72,7 +72,7 @@
 .progress-bar::-moz-range-track {
     background: var(--bar-bg);
     ;
-    border-radius: 0px;
+    border-radius: 0;
     position: relative;
     width: 100%;
     height: 5px;
@@ -89,8 +89,8 @@
     height: 5px;
     width: var(--seek-before-width);
     background: var(--seek-before-color);
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -101,8 +101,8 @@
 /* progress bar - firefox */
 .progress-bar::-moz-range-progress {
     background: var(--seek-before-color);
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     height: 5px;
 }
 

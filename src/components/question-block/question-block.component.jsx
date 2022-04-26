@@ -1,20 +1,41 @@
-import AudioPlayer from '../audio-player/audio-player.component';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import './question-block.styles.scss';
+import AudioPlayer from '../audio-player/audio-player.component';
+import { changeAnswer, changeTrueImage, changeTrueName } from '../../store/answerSlice';
+
+import '../../components/question-block/question-block.styles.scss';
 
 const QuestionBlock = () => {
+    const CurrentId = useSelector(state => state.toolkit.id);
+    const QuestionBird = useSelector(state => state.bird.birdRandom);
+    const TrueImage = useSelector(state => state.toolkit.trueImage);
+    const TrueName = useSelector(state => state.toolkit.trueName);
+
+    const dispatch = useDispatch();
+
+    const { image, name, audio, id } = QuestionBird;
+
+    useEffect(() => {
+        if (id ===CurrentId) {
+            dispatch(changeTrueImage(image));
+            dispatch(changeTrueName(name));
+            dispatch(changeAnswer(true)); 
+        }
+    })
+
     return (
         <div className='question-block-container'>
             <div className='image-bird'>
-                <img src='https://live.staticflickr.com//65535//49024617331_b9d0d2c9b3.jpg'/>
+                <img src={TrueImage} />
             </div>
             <div className='description-question'>
                 <div className='name-bird'>
-                    Ястреб
+                    {TrueName}
                 </div>
-                <hr/>
+                <hr />
                 <div className='song-bird'>
-                    <AudioPlayer />
+                    <AudioPlayer song={audio} />
                 </div>
             </div>
         </div>

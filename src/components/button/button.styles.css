@@ -1,0 +1,27 @@
+.next-level-button {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  border: 0.1rem solid #444;
+  color: #fff !important;
+  font-weight: 400;
+  margin-bottom: 1.7rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.25rem;
+  font-size: 0.9375rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.next-level-button.error {
+  background-color: #303030;
+}
+
+.next-level-button.right {
+  background-color: #12D09D;
+}
+/*# sourceMappingURL=button.styles.css.map */

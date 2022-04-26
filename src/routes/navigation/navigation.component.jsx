@@ -1,29 +1,40 @@
 import { Fragment } from "react";
+import { useSelector } from "react-redux";
 
-import './navigation.styles.scss';
+import CounterScore from "../../components/counter-score/counter-score.component";
+
+import '../../routes/navigation/navigation.styles.scss';
 
 const Navigation = () => {
+    const level = useSelector(state => state.bird.level);
+
+    const selectNav = (id) => {
+        if (level === id) return 'select';
+        else return ' ';
+    }
+
+
     return (
-        <Fragment>
+        <>
             <div className={'navigation-container'}>
                 <div className={'main-navigation-container'}>
                     <div className={'logo-container'}>
                         Song<span>bird</span>
                     </div>
                     <div className={'score'}>
-                        Score: 0
+                        <CounterScore />
                     </div>
                 </div>
                 <div className={'secondary-navigation-container'}>
-                    <div className={'nav-link'}>Разминка</div>
-                    <div className={'nav-link'}>Воробьиные</div>
-                    <div className={'nav-link'}>Лесные птицы</div>
-                    <div className={'nav-link'}>Певчие птицы</div>
-                    <div className={'nav-link'}>Хищные птицы</div>
-                    <div className={'nav-link'}>Моркие птицы</div>
+                    <div className={`${selectNav(0)} nav-link`}>Разминка</div>
+                    <div className={`${selectNav(1)} nav-link`}>Воробьиные</div>
+                    <div className={`${selectNav(2)} nav-link`}>Лесные птицы</div>
+                    <div className={`${selectNav(3)} nav-link`}>Певчие птицы</div>
+                    <div className={`${selectNav(4)} nav-link`}>Хищные птицы</div>
+                    <div className={`${selectNav(5)} nav-link`}>Морские птицы</div>
                 </div>
             </div>
-        </Fragment>
+        </>
     )
 };
 

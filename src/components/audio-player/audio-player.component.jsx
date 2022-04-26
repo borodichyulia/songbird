@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
 
-import "./audio-player.styles.scss";
+import "../../components/audio-player/audio-player.styles.scss";
 
 
-const AudioPlayer = () => {
+const AudioPlayer = ({song}) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [duration, setDuration] = useState(0);
     const [currentTime, setCurrentTime] = useState(0);
@@ -20,7 +20,7 @@ const AudioPlayer = () => {
         progressBar.current.max = seconds;
     }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
 
-    const calculateTime = (secs) => {
+    const calculateCurrentTime = (secs) => {
         const minutes = Math.floor(secs / 60);
         const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
         const seconds = Math.floor(secs % 60);
@@ -58,7 +58,7 @@ const AudioPlayer = () => {
 
     return (
         <div className={'audio-player'}>
-            <audio ref={audioPlayer} src="https://www.xeno-canto.org/sounds/uploaded/MMEJYLOPDO/XC512740-Duvh%C3%B6k_09.mp3" preload="metadata"></audio>
+            <audio ref={audioPlayer} src={song} preload="metadata"></audio>
 
             <div className={'button-player'}>
                 <button onClick={togglePlayPause} className={'play-pause'}>
@@ -71,8 +71,8 @@ const AudioPlayer = () => {
                     <input type="range" className={'progress-bar'} defaultValue="0" ref={progressBar} onChange={changeRange} />
                 </div>
                 <div className={'time-player'}>
-                    <div className={'current-time'}>{calculateTime(currentTime)}</div>
-                    <div className={'duration'}>{(duration && !isNaN(duration)) && calculateTime(duration)}</div>
+                    <div className={'current-time'}>{calculateCurrentTime(currentTime)}</div>
+                    <div className={'duration'}>{(duration && !isNaN(duration)) && calculateCurrentTime(duration)}</div>
                 </div>
             </div>
         </div>
