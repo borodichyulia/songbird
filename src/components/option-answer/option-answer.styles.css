@@ -1,0 +1,16 @@
+.option-answer-container {
+  width: 49%;
+  background-color: #363736;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #4e504e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=option-answer.styles.css.map */

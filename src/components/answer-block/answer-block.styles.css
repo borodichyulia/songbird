@@ -1,0 +1,49 @@
+.answer-block-container {
+  width: 49%;
+  background-color: #363736;
+  padding: 1rem 1.3rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.2em;
+  border: 0.1rem solid #4e504e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.answer-block-container .name-bird {
+  font-size: 1.5rem;
+}
+
+.answer-block-container hr {
+  margin: 0.5rem 0;
+}
+
+.kind-bird {
+  color: white;
+  font-size: 1rem;
+}
+
+.description-bird {
+  width: -webkit-fill-available;
+  margin-left: 1.7rem;
+}
+
+.information-bird {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text-description-bird {
+  color: white;
+  font-weight: 100;
+}
+/*# sourceMappingURL=answer-block.styles.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,wBAAwB,CAAA;EACpB,KAAK,EAAE,GAAG;EACV,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,UAAU;EACtB,aAAa,EAAE,MAAM;EACrB,MAAM,EAAE,oBAAoB;EAC5B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACzB",
+    "sources": [
+        "option-answer.styles.scss"
+    ],
+    "names": [],
+    "file": "option-answer.styles.css"
+}
